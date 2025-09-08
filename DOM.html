@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Latihan DOM</title>
+</head>
+<body>
+  <!-- Soal 1 -->
+  <h1 id="judul">Selamat Datang</h1>
+  <p>Belajar JavaScript DOM</p>
+
+  <hr>
+
+  <!-- Soal 2 -->
+  <ul>
+    <li class="menu">Home</li>
+    <li class="menu">About</li>
+    <li class="menu">Contact</li>
+  </ul>
+
+  <hr>
+
+  <!-- Soal 3 -->
+  <div>
+    <p>Paragraf pertama</p>
+    <p>Paragraf kedua</p>
+    <p>Paragraf ketiga</p>
+  </div>
+
+  <script>
+    // Soal 1
+    let judul = document.getElementById("judul");
+    console.log("Soal 1:", judul);
+
+    // Soal 2
+    let menuItems = document.getElementsByClassName("menu");
+    console.log("Soal 2:", menuItems);
+
+    // Tampilkan isi teks tiap elemen menu
+    for (let i = 0; i < menuItems.length; i++) {
+      console.log("Menu ke-" + (i+1) + ":", menuItems[i].innerText);
+    }
+
+    // Soal 3
+    let paragrafKedua = document.querySelector("div p:nth-child(2)");
+    console.log("Soal 3:", paragrafKedua);
+  </script>
+</body>
+</html>
